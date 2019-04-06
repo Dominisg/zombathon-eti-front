@@ -18,7 +18,7 @@ export default class AddToy extends Component {
     title: "",
     description: "",
     imgUri:
-      "https://www.marketing.neustar/blog/default-7d66f7da851b6b7d94f785c7d6e6a4b0.png"
+      "https://pngimage.net/wp-content/uploads/2018/05/add-image-png-8.png"
   };
 
   async componentDidMount() {
@@ -34,7 +34,7 @@ export default class AddToy extends Component {
   _onChoosePic = async () => {
     const {cancelled, uri} = await ImagePicker.launchImageLibraryAsync({
       allowsEditing: true,
-      aspect: [4, 3]
+      aspect: [3, 3]
     });
     if (!cancelled) {
       this.setState({imgUri: uri});
@@ -55,7 +55,7 @@ export default class AddToy extends Component {
     return (
       <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
         <View style={styles.container}>
-          <TouchableHighlight onPress={this._onChoosePic}>
+          <TouchableHighlight underlayColor='transparent' onPress={this._onChoosePic}>
             <Image
               style={styles.addPhoto}
               source={{
