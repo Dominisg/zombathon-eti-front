@@ -16,7 +16,7 @@ export default class App extends React.Component {
   }
 
   state = {
-    screen: 3,
+    screen: 4,
     login:'',
     password:''
   };
