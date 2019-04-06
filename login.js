@@ -27,7 +27,9 @@ export default class LoginScreen extends Component {
   render() {
     return (<View style={styles.container}>
       <TouchableHighlight style={styles.titleContainer}>
-        <Text style={styles.titleText}>ToyShare</Text>
+      <Image style={styles.logo} source={
+          require('./logo.png')
+        }/>
       </TouchableHighlight>
       <View style={styles.inputContainer}>
         <Image style={styles.inputIcon} source={{
@@ -56,6 +58,7 @@ export default class LoginScreen extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    marginTop:50,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -71,6 +74,10 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     flexDirection: 'row',
     alignItems: 'center'
+  },
+  logo: {
+    width: 400,
+    height:200
   },
   inputs: {
     height: 45,
@@ -99,7 +106,7 @@ const styles = StyleSheet.create({
     borderRadius: 30
   },
   loginButton: {
-    backgroundColor: "#00b5ec"
+    backgroundColor: "#332978"
   },
   loginText: {
     color: 'white'

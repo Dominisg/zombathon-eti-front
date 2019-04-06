@@ -52,6 +52,7 @@ class Swiper extends Component {
     };
 
     return (
+      <View style={styles.container}>
       <GestureRecognizer
         onSwipe={(direction, state) => this.onSwipe(direction, state)}
         onSwipeLeft={(state) => this.onSwipeLeft(state)}
@@ -73,16 +74,16 @@ class Swiper extends Component {
                  style={styles.arrow_right}
         />
         </View>
-        <View style={styles.container}>
         <Image
             source={{uri:this.state.photo}}
-            style={{width: 300, height: 300,borderRadius: 30}}
-            />
-        </View>
+            style={styles.addPhoto}
+            /></GestureRecognizer>
         <View style={styles.descContainer}>
           <TextInput style={styles.inputs} placeholder="Description" underlineColorAndroid='transparent' onChangeText={(description) => this.setState({description})}/>
         </View>
-      </GestureRecognizer>
+
+
+      </View>
     );
   }
 }
@@ -92,15 +93,14 @@ const styles = StyleSheet.create({
     {
       justifyContent: 'space-between',
       flexDirection:'row',
-      marginTop:50
+      marginTop:30
     },
-    container:
-    {
-        marginTop: 20 ,
-        justifyContent: 'flex-end',
-        marginLeft:'auto',
-        marginRight:'auto',
-
+    container: {
+      marginTop:20,
+      flex: 1,
+      marginRight:'auto',
+      marginLeft:'auto',
+      backgroundColor: '#FFFFFF'
     },
     item:
     {
@@ -117,6 +117,8 @@ const styles = StyleSheet.create({
       height: 160,
       marginBottom: 10,
       flexDirection: 'row',
+      marginRight:'auto',
+      marginLeft:'auto',
       alignItems: 'center'
     },
     text:
@@ -128,18 +130,29 @@ const styles = StyleSheet.create({
     {
         width:10,
         height:30,
-        marginLeft:10,
-        marginTop:20
+        marginLeft:5,
+        justifyContent: 'flex-end',
+        alignSelf: 'flex-end'
     },
     arrow_right:
     {
         width:10,
         height:30,
-        marginRight:10,
-        marginTop:20,
+        marginRight:5,
         justifyContent: 'flex-end',
         alignSelf: 'flex-end'
-    }
+    },
+    inputs: {
+      height: 45,
+      marginLeft: 16,
+      borderBottomColor: '#FFFFFF',
+      flex: 1
+    },
+    addPhoto: {
+      width: 300,
+      height:300,
+      marginBottom: 20
+    },
   })
 
 export default Swiper;
