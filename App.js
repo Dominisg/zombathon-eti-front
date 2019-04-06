@@ -17,7 +17,6 @@ export default class App extends React.Component {
     this.changeScreen = this.changeScreen.bind(this);
   }
 
-
   state = {
     screen:3
   }
@@ -61,13 +60,13 @@ export default class App extends React.Component {
     case 3:
     return(
             <View style={{flex:1}}>
-            <Header/>
                 <LoginScreen register={this.changeScreen}/>
             </View>
     );
     case 4:
     return(
             <View style={{flex:1}}>
+            <Header/>
             <ScrollView style={styles.container}>
                 <Profile/>
             </ScrollView>
@@ -77,7 +76,7 @@ export default class App extends React.Component {
     case 5:
     return(
       <View style={{flex:1}}>
-                <SignUpView/>
+                <SignUpView changescreen={this.changeScreen} />
       </View>
     )
       }

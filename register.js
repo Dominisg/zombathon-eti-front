@@ -27,8 +27,8 @@ export default class SignUpView extends Component {
     };
   }
 
-  onClickListener = viewId => {
-    Alert.alert("Alert", "Button pressed " + viewId);
+  onClickListener = changeScreen => {
+    changeScreen(3)
   };
 
   render() {
@@ -180,7 +180,7 @@ export default class SignUpView extends Component {
         </View>
         <TouchableHighlight
           style={[styles.buttonContainer, styles.signupButton]}
-          onPress={() => this.onClickListener("sign_up")}
+          onPress={() => this.onClickListener(this.props.changescreen)}
         >
           <Text style={styles.signUpText}>Sign up</Text>
         </TouchableHighlight>
