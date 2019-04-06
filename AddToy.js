@@ -18,7 +18,7 @@ export default class AddToy extends Component {
     title: "",
     description: "",
     imgUri:
-      "https://pngimage.net/wp-content/uploads/2018/05/add-image-png-8.png"
+      "https://i.imgur.com/T7Tzbh7.png"
   };
 
   async componentDidMount() {
@@ -94,7 +94,7 @@ export default class AddToy extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 40,
+    marginBottom: 30,
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
@@ -107,13 +107,14 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     width: 250,
     height: 45,
-    marginBottom: 20,
+    marginBottom: 10,
     flexDirection: "row",
     alignItems: "center"
   },
   inputs: {
     flex: 1,
-    marginLeft: 16,
+    marginLeft: 15,
+    marginRight: 15,
     borderBottomColor: "#FFFFFF"
   },
   inputsdesc: {
@@ -123,8 +124,8 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     width: 250,
     height: 180,
-    padding: 20,
-    marginBottom: 20,
+    padding: 15,
+    marginBottom: 15,
     flexDirection: "row",
     alignItems: "center",
     textAlignVertical: "top"
@@ -145,7 +146,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 20,
+    marginBottom: 15,
     width: 250,
     borderRadius: 30
   },
@@ -162,7 +163,8 @@ const styles = StyleSheet.create({
   addPhoto: {
     width: 300,
     height: 300,
-    marginBottom: 20,
+    marginBottom: 15,
+    marginTop:15,
     borderRadius: 20
   },
   headerContainer: {

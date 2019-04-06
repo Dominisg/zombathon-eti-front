@@ -193,6 +193,7 @@ export default class SignUpView extends Component {
 const styles = StyleSheet.create({
   container: {
     marginTop:20,
+    marginBottom:10,
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
@@ -223,7 +224,7 @@ const styles = StyleSheet.create({
   },
   inputs: {
     height: 45,
-    marginLeft: 16, 
+    marginLeft: 16,
     borderBottomColor: "#FFFFFF",
     flex: 1
   },
