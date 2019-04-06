@@ -17,8 +17,6 @@ const styles = {
         height: 40,
         width:'25.1%',
         backgroundColor: 'transparent',
-        borderRightColor: '#000000',
-        borderRightWidth: 1,
         alignSelf: 'stretch',
         justifyContent: 'center',
         alignItems: 'center',

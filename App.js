@@ -5,6 +5,7 @@ import Navbar from './Navbar'
 import AddToy from './AddToy'
 import Swiper from './swipe'
 import LoginScreen from './login'
+import Header from './Header'
 
 
 
@@ -31,6 +32,7 @@ export default class App extends React.Component {
     case 0:
     return(
       <View style={{flex:1}}>
+      <Header/>
         <ScrollView style={styles.container}>
           <Swiper/>
         </ScrollView>
@@ -39,6 +41,7 @@ export default class App extends React.Component {
     case 1:
     return(
       <View style={{flex:1}}>
+        <Header/>
         <ScrollView style={styles.container}>
           <AddToy/>
         </ScrollView>
@@ -46,7 +49,8 @@ export default class App extends React.Component {
       </View>);
     case 2:
     return(
-            <View style={{flex:1}}>
+          <View style={{flex:1}}>
+            <Header/>
             <ScrollView style={styles.container}>
                 <MatchList/>
             </ScrollView>
@@ -56,6 +60,7 @@ export default class App extends React.Component {
     case 3:
     return(
             <View style={{flex:1}}>
+            <Header/>
             <ScrollView style={styles.container}>
                 <LoginScreen/>
             </ScrollView>
@@ -69,7 +74,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
     container:{
         alignContent: 'center',
-        marginTop: 20,
-        backgroundColor:'#f8f8f8' ,
+        backgroundColor:'transparent' ,
     },
 });

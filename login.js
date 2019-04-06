@@ -28,7 +28,7 @@ export default class LoginScreen extends Component {
     return (<View style={styles.container}>
       <TouchableHighlight style={styles.titleContainer}>
       <Image style={styles.logo} source={
-          require('assets/logo.png')
+          require('./assets/logo.png')
         }/>
       </TouchableHighlight>
       <View style={styles.inputContainer}>
