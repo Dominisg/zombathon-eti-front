@@ -4,6 +4,7 @@ import MatchList from './MatchList'
 import Navbar from './Navbar'
 import AddToy from './AddToy'
 import Swiper from './swipe'
+import LoginScreen from './login'
 
 
 
@@ -16,7 +17,7 @@ export default class App extends React.Component {
 
 
   state = {
-    screen:1
+    screen:3
   }
 
   changeScreen(screen_num){
@@ -48,6 +49,15 @@ export default class App extends React.Component {
             <View style={{flex:1}}>
             <ScrollView style={styles.container}>
                 <MatchList/>
+            </ScrollView>
+            <Navbar handle={this.changeScreen} />
+      </View>
+    );
+    case 3:
+    return(
+            <View style={{flex:1}}>
+            <ScrollView style={styles.container}>
+                <LoginScreen/>
             </ScrollView>
             <Navbar handle={this.changeScreen} />
       </View>

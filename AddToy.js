@@ -45,19 +45,6 @@ async componentDidMount() {
     }
   }
 
-    _pickImage = async () => {
-    let result = await ImagePicker.launchImageLibraryAsync({
-      allowsEditing: true,
-      aspect: [4, 3],
-    });
-
-    console.log(result);
-
-    if (!result.cancelled) {
-      this.setState({ imageUri: result.uri });
-    }
-  };
-
   constructor(props) {
     super(props);
   }
@@ -119,10 +106,8 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   inputs: {
-    height: 45,
     marginLeft: 16,
-    borderBottomColor: '#FFFFFF',
-    flex: 1
+    borderBottomColor: '#FFFFFF'
   },
   inputIcon: {
     width: 30,
@@ -145,7 +130,7 @@ const styles = StyleSheet.create({
     borderRadius: 30
   },
   loginButton: {
-    backgroundColor: "#00b5ec"
+    backgroundColor: "#332978"
   },
   loginText: {
     color: 'white'
@@ -157,7 +142,8 @@ const styles = StyleSheet.create({
   addPhoto: {
     width: 300,
     height:300,
-    marginBottom: 20
+    marginBottom: 20,
+    borderRadius: 20
   },
   headerContainer: {
     textAlign: 'left'
