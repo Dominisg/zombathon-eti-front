@@ -46,6 +46,7 @@ export default class AddToy extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    marginTop:60,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -58,7 +59,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     width: 250,
     height: 45,
-    marginBottom: 20,
+    marginBottom: 10,
     flexDirection: 'row',
     alignItems: 'center'
   },
@@ -69,7 +70,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     width: 250,
     height: 160,
-    marginBottom: 20,
+    marginBottom: 10,
     flexDirection: 'row',
     alignItems: 'center'
   },

@@ -3,7 +3,7 @@ import { ScrollView,StyleSheet, Text, View } from 'react-native';
 import MatchList from './MatchList'
 import Navbar from './Navbar'
 import AddToy from './AddToy'
-import SomeComponent from './swipe'
+import Swiper from './swipe'
 
 
 
@@ -13,7 +13,7 @@ export default class App extends React.Component {
     super(props);
     this.changeScreen = this.changeScreen.bind(this);
   }
-  
+
 
   state = {
     screen:1
@@ -31,7 +31,7 @@ export default class App extends React.Component {
     return(
       <View style={{flex:1}}>
         <ScrollView style={styles.container}>
-          <SomeComponent/>
+          <Swiper/>
         </ScrollView>
         <Navbar handle={this.changeScreen}/>
       </View>);
