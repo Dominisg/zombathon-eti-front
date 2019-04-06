@@ -10,13 +10,13 @@ import {
   Alert
 } from 'react-native';
 
-export default class AddToy extends Component {
+export default class LoginScreen extends Component {
 
   constructor(props) {
     super(props);
     state = {
-      title:'',
-      description:''
+      email: '',
+      password: ''
     }
   }
 
@@ -26,20 +26,30 @@ export default class AddToy extends Component {
 
   render() {
     return (<View style={styles.container}>
-      <Image style={styles.addPhoto}source={{
-          uri: 'https://www.marketing.neustar/blog/default-7d66f7da851b6b7d94f785c7d6e6a4b0.png'
-        }}/>
+      <TouchableHighlight style={styles.titleContainer}>
+        <Text style={styles.titleText}>ToyShare</Text>
+      </TouchableHighlight>
       <View style={styles.inputContainer}>
-        <TextInput style={styles.inputs} placeholder="Title" keyboardType="email-address" underlineColorAndroid='transparent' onChangeText={(title) => this.setState({title})}/>
-      </View>
-      <View style={styles.descContainer}>
-        <TextInput style={styles.inputs} placeholder="Description" underlineColorAndroid='transparent' onChangeText={(description) => this.setState({description})}/>
+        <Image style={styles.inputIcon} source={{
+            uri: 'https://png.icons8.com/message/ultraviolet/50/3498db'
+          }}/>
+        <TextInput style={styles.inputs} placeholder="Email" keyboardType="email-address" underlineColorAndroid='transparent' onChangeText={(email) => this.setState({email})}/>
       </View>
 
-      <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]} onPress={() => this.onClickListener('addToy')}>
-        <Text style={styles.loginText}>Add toy</Text>
+      <View style={styles.inputContainer}>
+        <Image style={styles.inputIcon} source={{
+            uri: 'https://png.icons8.com/key-2/ultraviolet/50/3498db'
+          }}/>
+        <TextInput style={styles.inputs} placeholder="Password" secureTextEntry={true} underlineColorAndroid='transparent' onChangeText={(password) => this.setState({password})}/>
+      </View>
+
+      <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]} onPress={() => this.onClickListener('login')}>
+        <Text style={styles.loginText}>Login</Text>
       </TouchableHighlight>
 
+      <TouchableHighlight style={styles.buttonContainer} onPress={() => this.onClickListener('register')}>
+        <Text>Don't have account? Register now!</Text>
+      </TouchableHighlight>
     </View>);
   }
 }
@@ -58,17 +68,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     width: 250,
     height: 45,
-    marginBottom: 20,
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
-  descContainer: {
-    borderBottomColor: '#F5FCFF',
-    backgroundColor: '#DCDCDC',
-    borderRadius: 20,
-    borderBottomWidth: 1,
-    width: 250,
-    height: 160,
     marginBottom: 20,
     flexDirection: 'row',
     alignItems: 'center'
@@ -108,13 +107,5 @@ const styles = StyleSheet.create({
   titleText: {
     color: 'darkgrey',
     fontSize: 50
-  },
-  addPhoto: {
-    width: 300,
-    height:300,
-    marginBottom: 20
-  },
-  headerContainer: {
-    textAlign: 'left'
   }
 });
