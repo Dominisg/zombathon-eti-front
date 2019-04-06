@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+  import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
@@ -7,7 +7,8 @@ import {
   Button,
   TouchableHighlight,
   Image,
-  Alert
+  Alert,
+  KeyboardAvoidingView
 } from 'react-native';
 
 export default class LoginScreen extends Component {
@@ -25,7 +26,9 @@ export default class LoginScreen extends Component {
   }
 
   render() {
-    return (<View style={styles.container}>
+    return (
+      <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
+      <View style={styles.container}>
       <TouchableHighlight style={styles.titleContainer}>
       <Image style={styles.logo} source={
           require('./assets/logo.png')
@@ -52,13 +55,14 @@ export default class LoginScreen extends Component {
       <TouchableHighlight style={styles.buttonContainer} onPress={() => this.props.register(5)}>
         <Text>Don't have account? Register now!</Text>
       </TouchableHighlight>
-    </View>);
+    </View>
+    </KeyboardAvoidingView>);
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    marginTop:50,
+    marginTop:40,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',

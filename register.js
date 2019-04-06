@@ -8,7 +8,8 @@ import {
   Button,
   TouchableHighlight,
   Image,
-  Alert
+  Alert,
+  KeyboardAvoidingView
 } from "react-native";
 
 export default class SignUpView extends Component {
@@ -33,6 +34,7 @@ export default class SignUpView extends Component {
 
   render() {
     return (
+      <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
       <View style={styles.container}>
         <TouchableHighlight style={styles.registerContainer}>
           <Text style={styles.registerText}>Register</Text>
@@ -185,11 +187,12 @@ export default class SignUpView extends Component {
           <Text style={styles.signUpText}>Sign up</Text>
         </TouchableHighlight>
       </View>
-    );
+    </KeyboardAvoidingView>);
   }
 }
 const styles = StyleSheet.create({
   container: {
+    marginTop:40,
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
@@ -220,7 +223,7 @@ const styles = StyleSheet.create({
   },
   inputs: {
     height: 45,
-    marginLeft: 16,
+    marginLeft: 16, 
     borderBottomColor: "#FFFFFF",
     flex: 1
   },
@@ -241,7 +244,8 @@ const styles = StyleSheet.create({
     borderRadius: 30
   },
   signupButton: {
-    backgroundColor: "#332978"
+    backgroundColor: "#332978",
+    marginBottom:50
   },
   signUpText: {
     color: "white"
