@@ -11,12 +11,14 @@ import {
   Alert,
   KeyboardAvoidingView
 } from "react-native";
+import {register2} from './api'
 
 export default class SignUpView extends Component {
   constructor(props) {
     super(props);
     state = {
       fullName: "",
+      username:"",
       email: "",
       password: "",
       tel: "",
@@ -31,6 +33,8 @@ export default class SignUpView extends Component {
   onClickListener = changeScreen => {
     changeScreen(3);
   };
+
+
 
   render() {
     return (
@@ -65,7 +69,7 @@ export default class SignUpView extends Component {
                 style={styles.inputs}
                 placeholder="Login"
                 underlineColorAndroid="transparent"
-                onChangeText={login => this.setState({login})}
+                onChangeText={username => this.setState({username})}
               />
             </View>
 
@@ -198,7 +202,9 @@ export default class SignUpView extends Component {
             </View>
             <TouchableHighlight
               style={[styles.buttonContainer, styles.signupButton]}
-              onPress={() => this.onClickListener(this.props.changescreen)}
+              onPress={() => {this.onClickListener(this.props.changescreen)
+              register2(this.state)
+              }}
             >
               <Text style={styles.signUpText}>Sign up</Text>
             </TouchableHighlight>

@@ -23,14 +23,17 @@ export default class LoginScreen extends Component {
   constructor(props) {
     super(props);
     state = {
-      login: '',
-      password: ''
+      username: '',
+      password: '',
     }
   }
 
   onClickListener = (viewId) => {
     Alert.alert("Alert", "Button pressed " + viewId);
   }
+
+
+
 
   render() {
     return (
@@ -45,7 +48,7 @@ export default class LoginScreen extends Component {
         <Image style={styles.inputIcon} source={{
             uri: 'https://png.icons8.com/message/ultraviolet/50/3498db'
           }}/>
-        <TextInput style={styles.inputs} placeholder="Login" underlineColorAndroid='transparent' onChangeText={(login) => this.setState({login})}/>
+        <TextInput style={styles.inputs} placeholder="Login" underlineColorAndroid='transparent' onChangeText={(username) => this.setState({username})}/>
       </View>
 
       <View style={styles.inputContainer}>
@@ -54,7 +57,6 @@ export default class LoginScreen extends Component {
           }}/>
         <TextInput style={styles.inputs} placeholder="Password" secureTextEntry={true} underlineColorAndroid='transparent' onChangeText={(password) => this.setState({password})}/>
       </View>
-
       <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]} onPress={() =>
         {logIn(this.state.login,this.state.password).then((rsp)=>{if(rsp.status===200){
           

@@ -6,17 +6,15 @@ const api = Constants.manifest.packagerOpts.dev
   ? Constants.manifest.debuggerHost.split(`:`).shift().concat(`:3000`)
 : `api.example.com`;
 
-
 const urltoys = `http://172.20.18.5:8080/app/toys/`;
 //const urltoys = `http://${api}/toys`;
 const urltrades = `http://${api}/trades`;
-
 
 export function getToys(){
 return fetch(urltoys)
 .then(response => response.json()).
 then(resp=>resp.results)
-//then(resp=>resp)
+// then(resp=>resp)
 }
 
 export function getTrades(){
@@ -24,6 +22,7 @@ return fetch(urltrades)
 .then(response => response.json()).
 then(resp=>resp)
 }
+
 
 export function logIn(login, password){
 let headers = new Headers();
@@ -34,4 +33,19 @@ return fetch(urltoys, {method:'GET',
 .then(response => response)
 }
 
+export function register2(state) {
 
+console.log(state)
+
+fetch(urltoys, {
+  method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  body:
+  JSON.stringify({
+    username:state.username,email:state.email, password:state.password,
+  })
+}).then(resp=>resp.json()).then(res => console.log(res))
+
+}
