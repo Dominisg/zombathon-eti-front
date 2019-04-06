@@ -1,7 +1,7 @@
 'use strict';
 
 import React, {Component} from 'react';
-import {AppRegistry, View, Text, List, ListItem, FlatList, StyleSheet, Image, ScrollView,TextInput} from 'react-native';
+import {AppRegistry, View, Text, List, ListItem, FlatList, StyleSheet, Image, ScrollView,TextInput,TouchableHighlight} from 'react-native';
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 import{getToys} from './api'
 
@@ -112,15 +112,19 @@ class Swiper extends Component {
         }}
         >
         <View style={styles.header}>
+        <TouchableHighlight underlayColor='transparent' onPress={(state) => this.onSwipeLeft(state)}>
         <Image
                  source={require('./photos/arrows_left.png')}
                  style={styles.arrow_left}
         />
+        </TouchableHighlight>
         <Text style={styles.text}>{this.state.myText}</Text>
+        <TouchableHighlight underlayColor='transparent' onPress={(state) => this.onSwipeRight(state)}>
         <Image
                  source={require('./photos/arrows_right.png')}
                  style={styles.arrow_right}
         />
+        </TouchableHighlight>
         </View>
         <Image
             source={{uri:this.state.photo}}
@@ -144,8 +148,6 @@ const styles = StyleSheet.create({
     container: {
       marginBottom:30,
       flex: 1,
-      marginRight:'auto',
-      marginLeft:'auto',
       backgroundColor: '#FFFFFF'
     },
     item:
@@ -157,16 +159,16 @@ const styles = StyleSheet.create({
     descContainer: {
       borderBottomColor: '#F5FCFF',
       backgroundColor: '#DCDCDC',
-      borderRadius: 20,
+      borderRadius: 30,
       borderBottomWidth: 1,
-      width: 350,
+      alignSelf: 'stretch',
+      textAlign: 'center',
       height: 180,
       marginBottom: 10,
       padding:15,
       flexDirection: 'row',
-      marginRight:'auto',
-      marginLeft:'auto',
-      alignItems: 'center'
+      alignItems: 'center',
+      fontSize:20
     },
     text:
     {
@@ -177,7 +179,7 @@ const styles = StyleSheet.create({
     {
         width:10,
         height:30,
-        marginLeft:5,
+        marginLeft:10,
         justifyContent: 'flex-end',
         alignSelf: 'flex-end'
     },
@@ -185,22 +187,22 @@ const styles = StyleSheet.create({
     {
         width:10,
         height:30,
-        marginRight:5,
+        marginRight:10,
         justifyContent: 'flex-end',
         alignSelf: 'flex-end'
     },
     inputs: {
       borderBottomColor: "#F5FCFF",
       backgroundColor: "#DCDCDC",
-      borderRadius: 20,
+      borderRadius: 30,
       borderBottomWidth: 1,
-      width: 300,
       height: 180,
       padding: 15,
       marginBottom: 15,
       flexDirection: "row",
       alignItems: "center",
-      textAlignVertical: "top"
+      textAlignVertical: "top",
+      fontSize:20
     },
     addPhoto: {
       borderRadius: 20,
