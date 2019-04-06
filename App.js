@@ -3,6 +3,7 @@ import { ScrollView,StyleSheet, Text, View } from 'react-native';
 import MatchList from './MatchList'
 import Navbar from './Navbar'
 import AddToy from './AddToy'
+import SomeComponent from './swipe'
 
 
 
@@ -26,6 +27,14 @@ export default class App extends React.Component {
 
   render() {
   switch (this.state.screen){
+    case 0:
+    return(
+      <View style={{flex:1}}>
+        <ScrollView style={styles.container}>
+          <SomeComponent/>
+        </ScrollView>
+        <Navbar handle={this.changeScreen}/>
+      </View>);
     case 1:
     return(
       <View style={{flex:1}}>
