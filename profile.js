@@ -28,15 +28,16 @@ export default class Profile extends Component {
   render() {
     return (
       <TouchableOpacity style={styles.item}>
-        <Image
-          style={[styles.image]}
-          source={{
-            uri:
-              "https://www.marketing.neustar/blog/default-7d66f7da851b6b7d94f785c7d6e6a4b0.png"
-          }}
-        />
-        <Text style={[styles.image, {alignSelf: "flex-end", alignContent: 'center'}]}>Goluch</Text>
-        
+        <View style={[styles.boxContener]}>
+          <Image
+            style={[styles.image]}
+            source={{
+              uri:
+                "https://www.marketing.neustar/blog/default-7d66f7da851b6b7d94f785c7d6e6a4b0.png"
+            }}
+          />
+          <Text style={[styles.title]}>Goluch</Text>
+        </View>
       </TouchableOpacity>
     );
   }
@@ -45,13 +46,16 @@ export default class Profile extends Component {
 const styles = StyleSheet.create({
   title: {
     fontSize: 24,
-    color: '#DCDCDC'
+    color: "#DCDCDC"
   },
   image: {
     width: 100,
     height: 100,
     borderRadius: 10,
-
+  },
+  title: {
+    textAlign: "right",
+    fontSize: 36
   },
   arrows: {
     width: 50,
@@ -59,11 +63,12 @@ const styles = StyleSheet.create({
   },
   item: {
     flex: 1,
-    flexDirection: "row",
     backgroundColor: "#eaedf2",
     borderRadius: 10,
     padding: 20,
-    margin: 5,
-    justifyContent: "space-between"
+    margin: 5
+  },
+  boxContener: {
+    flexDirection: "row"
   }
 });
