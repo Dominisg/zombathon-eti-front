@@ -28,7 +28,7 @@ export default class LoginScreen extends Component {
     return (<View style={styles.container}>
       <TouchableHighlight style={styles.titleContainer}>
       <Image style={styles.logo} source={
-          require('assets/logo.png')
+          require('./assets/logo.png')
         }/>
       </TouchableHighlight>
       <View style={styles.inputContainer}>
@@ -45,11 +45,11 @@ export default class LoginScreen extends Component {
         <TextInput style={styles.inputs} placeholder="Password" secureTextEntry={true} underlineColorAndroid='transparent' onChangeText={(password) => this.setState({password})}/>
       </View>
 
-      <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]} onPress={() => this.onClickListener('login')}>
+      <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]} onPress={() => this.props.register(1)}>
         <Text style={styles.loginText}>Login</Text>
       </TouchableHighlight>
 
-      <TouchableHighlight style={styles.buttonContainer} onPress={() => this.onClickListener('register')}>
+      <TouchableHighlight style={styles.buttonContainer} onPress={() => this.props.register(5)}>
         <Text>Don't have account? Register now!</Text>
       </TouchableHighlight>
     </View>);

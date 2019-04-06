@@ -5,6 +5,8 @@ import Navbar from './Navbar'
 import AddToy from './AddToy'
 import Swiper from './swipe'
 import LoginScreen from './login'
+import Profile from './profile'
+import SignUpView from './register'
 
 
 
@@ -56,12 +58,24 @@ export default class App extends React.Component {
     case 3:
     return(
             <View style={{flex:1}}>
+                <LoginScreen register={this.changeScreen}/>
+            </View>
+    );
+    case 4:
+    return(
+            <View style={{flex:1}}>
             <ScrollView style={styles.container}>
-                <LoginScreen/>
+                <Profile/>
             </ScrollView>
             <Navbar handle={this.changeScreen} />
       </View>
-      )
+    )
+    case 5:
+    return(
+      <View style={{flex:1}}>
+                <SignUpView/>
+      </View>
+    )
       }
   }
 }
@@ -70,6 +84,6 @@ const styles = StyleSheet.create({
     container:{
         alignContent: 'center',
         marginTop: 20,
-        backgroundColor:'#f8f8f8' ,
+        backgroundColor:'#ffffff' ,
     },
 });
