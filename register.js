@@ -29,171 +29,188 @@ export default class SignUpView extends Component {
   }
 
   onClickListener = changeScreen => {
-    changeScreen(3)
+    changeScreen(3);
   };
 
   render() {
     return (
       <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
-      <View style={styles.container}>
-        <TouchableHighlight style={styles.registerContainer}>
-          <Text style={styles.registerText}>Register</Text>
-        </TouchableHighlight>
-        <View style={styles.inputContainer}>
-          <Image
-            style={styles.inputIcon}
-            source={{
-              uri: "https://png.icons8.com/male-user/ultraviolet/50/3498db"
-            }}
-          />
-          <TextInput
-            style={styles.inputs}
-            placeholder="Full name"
-            keyboardType="email-address"
-            underlineColorAndroid="transparent"
-            onChangeText={fullName => this.setState({fullName})}
-          />
-        </View>
+        <View style={styles.container}>
+          <TouchableHighlight style={styles.registerContainer}>
+            <Text style={styles.registerText}>Register</Text>
+          </TouchableHighlight>
+          <View style={styles.inputContainer}>
+            <Image
+              style={styles.inputIcon}
+              source={{
+                uri: "https://png.icons8.com/male-user/ultraviolet/50/3498db"
+              }}
+            />
+            <TextInput
+              style={styles.inputs}
+              placeholder="Full name"
+              underlineColorAndroid="transparent"
+              onChangeText={fullName => this.setState({fullName})}
+            />
+          </View>
+            <View style={styles.inputContainer}>
+              <Image
+                style={styles.inputIcon}
+                source={{
+                  uri:
+                    "https://img.icons8.com/ultraviolet/40/000000/password.png"
+                }}
+              />
+              <TextInput
+                style={styles.inputs}
+                placeholder="Login"
+                underlineColorAndroid="transparent"
+                onChangeText={login => this.setState({login})}
+              />
+            </View>
 
-        <View style={styles.inputContainer}>
-          <Image
-            style={styles.inputIcon}
-            source={{
-              uri: "https://png.icons8.com/message/ultraviolet/50/3498db"
-            }}
-          />
-          <TextInput
-            style={styles.inputs}
-            placeholder="Email"
-            keyboardType="email-address"
-            underlineColorAndroid="transparent"
-            onChangeText={email => this.setState({email})}
-          />
-        </View>
+            <View style={styles.inputContainer}>
+              <Image
+                style={styles.inputIcon}
+                source={{
+                  uri: "https://png.icons8.com/message/ultraviolet/50/3498db"
+                }}
+              />
+              <TextInput
+                style={styles.inputs}
+                placeholder="Email"
+                keyboardType="email-address"
+                underlineColorAndroid="transparent"
+                onChangeText={email => this.setState({email})}
+              />
+            </View>
 
-        <View style={styles.inputContainer}>
-          <Image
-            style={styles.inputIcon}
-            source={{uri: "https://png.icons8.com/key-2/ultraviolet/50/3498db"}}
-          />
-          <TextInput
-            style={styles.inputs}
-            placeholder="Password"
-            secureTextEntry={true}
-            underlineColorAndroid="transparent"
-            onChangeText={password => this.setState({password})}
-          />
-        </View>
+            <View style={styles.inputContainer}>
+              <Image
+                style={styles.inputIcon}
+                source={{
+                  uri: "https://png.icons8.com/key-2/ultraviolet/50/3498db"
+                }}
+              />
+              <TextInput
+                style={styles.inputs}
+                placeholder="Password"
+                secureTextEntry={true}
+                underlineColorAndroid="transparent"
+                onChangeText={password => this.setState({password})}
+              />
+            </View>
 
-        <View style={styles.inputContainer}>
-          <Image
-            style={styles.inputIcon}
-            source={{
-              uri: "https://img.icons8.com/ultraviolet/40/000000/phone.png"
-            }}
-          />
-          <TextInput
-            style={styles.inputs}
-            placeholder="Telephone"
-            secureTextEntry={true}
-            underlineColorAndroid="transparent"
-            onChangeText={tel => this.setState({tel})}
-          />
-        </View>
+            <View style={styles.inputContainer}>
+              <Image
+                style={styles.inputIcon}
+                source={{
+                  uri: "https://img.icons8.com/ultraviolet/40/000000/phone.png"
+                }}
+              />
+              <TextInput
+                style={styles.inputs}
+                placeholder="Telephone"
+                keyboardType="phone-pad"
+                underlineColorAndroid="transparent"
+                onChangeText={tel => this.setState({tel})}
+              />
+            </View>
 
-        <View style={styles.inputContainer}>
-          <Image
-            style={styles.inputIcon}
-            source={{
-              uri: "https://img.icons8.com/ultraviolet/40/000000/age.png"
-            }}
-          />
-          <TextInput
-            style={styles.inputs}
-            placeholder="Age"
-            secureTextEntry={true}
-            underlineColorAndroid="transparent"
-            onChangeText={age => this.setState({age})}
-          />
-        </View>
+            <View style={styles.inputContainer}>
+              <Image
+                style={styles.inputIcon}
+                source={{
+                  uri: "https://img.icons8.com/ultraviolet/40/000000/age.png"
+                }}
+              />
+              <TextInput
+                style={styles.inputs}
+                placeholder="Age"
+                keyboardType="numeric"
+                underlineColorAndroid="transparent"
+                onChangeText={age => this.setState({age})}
+              />
+            </View>
 
-        <View style={styles.inputContainer}>
-          <Image
-            style={styles.inputIcon}
-            source={{
-              uri: "https://img.icons8.com/ultraviolet/40/000000/building.png"
-            }}
-          />
-          <TextInput
-            style={styles.inputs}
-            placeholder="City"
-            secureTextEntry={true}
-            underlineColorAndroid="transparent"
-            onChangeText={city => this.setState({city})}
-          />
-        </View>
+            <View style={styles.inputContainer}>
+              <Image
+                style={styles.inputIcon}
+                source={{
+                  uri:
+                    "https://img.icons8.com/ultraviolet/40/000000/building.png"
+                }}
+              />
+              <TextInput
+                style={styles.inputs}
+                placeholder="City"
+                underlineColorAndroid="transparent"
+                onChangeText={city => this.setState({city})}
+              />
+            </View>
 
-        <View style={styles.inputContainer}>
-          <Image
-            style={styles.inputIcon}
-            source={{
-              uri: "https://img.icons8.com/ultraviolet/40/000000/road.png"
-            }}
-          />
-          <TextInput
-            style={styles.inputs}
-            placeholder="Street"
-            secureTextEntry={true}
-            underlineColorAndroid="transparent"
-            onChangeText={street => this.setState({street})}
-          />
-        </View>
+            <View style={styles.inputContainer}>
+              <Image
+                style={styles.inputIcon}
+                source={{
+                  uri: "https://img.icons8.com/ultraviolet/40/000000/road.png"
+                }}
+              />
+              <TextInput
+                style={styles.inputs}
+                placeholder="Street"
+                underlineColorAndroid="transparent"
+                onChangeText={street => this.setState({street})}
+              />
+            </View>
 
-        <View style={styles.inputContainer}>
-          <Image
-            style={styles.inputIcon}
-            source={{
-              uri: "https://img.icons8.com/ultraviolet/40/000000/home.png"
-            }}
-          />
-          <TextInput
-            style={styles.inputs}
-            placeholder="House number"
-            secureTextEntry={true}
-            underlineColorAndroid="transparent"
-            onChangeText={houseNumber => this.setState({houseNumber})}
-          />
-        </View>
+            <View style={styles.inputContainer}>
+              <Image
+                style={styles.inputIcon}
+                source={{
+                  uri: "https://img.icons8.com/ultraviolet/40/000000/home.png"
+                }}
+              />
+              <TextInput
+                style={styles.inputs}
+                placeholder="House number"
+                underlineColorAndroid="transparent"
+                keyboardType="numeric"
+                onChangeText={houseNumber => this.setState({houseNumber})}
+              />
+            </View>
 
-        <View style={styles.inputContainer}>
-          <Image
-            style={styles.inputIcon}
-            source={{
-              uri: "https://img.icons8.com/ultraviolet/40/000000/mailbox-opened-flag-down.png"
-            }}
-          />
-          <TextInput
-            style={styles.inputs}
-            placeholder="Post code"
-            secureTextEntry={true}
-            underlineColorAndroid="transparent"
-            onChangeText={postCode => this.setState({postCode})}
-          />
-        </View>
-        <TouchableHighlight
-          style={[styles.buttonContainer, styles.signupButton]}
-          onPress={() => this.onClickListener(this.props.changescreen)}
-        >
-          <Text style={styles.signUpText}>Sign up</Text>
-        </TouchableHighlight>
-      </View>
-    </KeyboardAvoidingView>);
+            <View style={styles.inputContainer}>
+              <Image
+                style={styles.inputIcon}
+                source={{
+                  uri:
+                    "https://img.icons8.com/ultraviolet/40/000000/mailbox-opened-flag-down.png"
+                }}
+                secureTextEntry={true}
+              />
+              <TextInput
+                style={styles.inputs}
+                placeholder="Post code"
+                underlineColorAndroid="transparent"
+                onChangeText={postCode => this.setState({postCode})}
+              />
+            </View>
+            <TouchableHighlight
+              style={[styles.buttonContainer, styles.signupButton]}
+              onPress={() => this.onClickListener(this.props.changescreen)}
+            >
+              <Text style={styles.signUpText}>Sign up</Text>
+            </TouchableHighlight>
+          </View>
+      </KeyboardAvoidingView>
+    );
   }
 }
 const styles = StyleSheet.create({
   container: {
-    marginTop:20,
-    marginBottom:10,
+    marginTop: 20,
+    marginBottom: 10,
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
@@ -208,7 +225,7 @@ const styles = StyleSheet.create({
     width: 250
   },
   registerText: {
-    color: 'darkgrey',
+    color: "darkgrey",
     fontSize: 30
   },
   inputContainer: {
@@ -246,7 +263,7 @@ const styles = StyleSheet.create({
   },
   signupButton: {
     backgroundColor: "#332978",
-    marginBottom:50
+    marginBottom: 50
   },
   signUpText: {
     color: "white"
