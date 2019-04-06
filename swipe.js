@@ -62,12 +62,12 @@ class SomeComponent extends Component {
           backgroundColor: this.state.backgroundColor
         }}
         >
-        <Text style={styles.text}>{this.state.myText}</Text>
-        <View style={{justifyContent: 'space-between',  flexDirection:'row'}}>
+        <View style={styles.header}>
         <Image
                  source={require('./photos/arrows_left.png')}
                  style={styles.arrow_left}
         />
+        <Text style={styles.text}>{this.state.myText}</Text>
         <Image
                  source={require('./photos/arrows_right.png')}
                  style={styles.arrow_right}
@@ -85,6 +85,12 @@ class SomeComponent extends Component {
 }
 
 const styles = StyleSheet.create({
+    header:
+    {
+      justifyContent: 'space-between',
+      flexDirection:'row',
+      marginTop:50
+    },
     container:
     {
         marginTop: 20 ,
@@ -99,19 +105,18 @@ const styles = StyleSheet.create({
     text:
     {
         textAlign: 'center',
-        marginTop: 50,
         fontSize: 36
     },
     arrow_left:
     {
-        width:30,
+        width:10,
         height:30,
         marginLeft:10,
         marginTop:20
     },
     arrow_right:
     {
-        width:30,
+        width:10,
         height:30,
         marginRight:10,
         marginTop:20,
