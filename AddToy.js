@@ -17,8 +17,7 @@ export default class AddToy extends Component {
   state = {
     title: "",
     description: "",
-    imgUri:
-      "https://i.imgur.com/T7Tzbh7.png"
+    imgUri: "https://i.imgur.com/T7Tzbh7.png"
   };
 
   async componentDidMount() {

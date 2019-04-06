@@ -10,9 +10,16 @@ import {
   Alert,
   KeyboardAvoidingView
 } from 'react-native';
+import {logIn} from "./api"
+
+
 
 export default class LoginScreen extends Component {
+  
+  login = ""
+  password=""
 
+  error = 0
   constructor(props) {
     super(props);
     state = {
@@ -48,7 +55,15 @@ export default class LoginScreen extends Component {
         <TextInput style={styles.inputs} placeholder="Password" secureTextEntry={true} underlineColorAndroid='transparent' onChangeText={(password) => this.setState({password})}/>
       </View>
 
-      <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]} onPress={() => this.props.register(1)}>
+      <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]} onPress={() =>
+        {logIn(this.state.login,this.state.password).then((rsp)=>{if(rsp.status===200){
+          
+          this.props.register(1)
+          this.props.setuser(this.state.login,this.state.password)       
+          }}).catch((r)=>{})
+          
+      }
+      }>
         <Text style={styles.loginText}>Login</Text>
       </TouchableHighlight>
 

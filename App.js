@@ -16,12 +16,21 @@ export default class App extends React.Component {
   }
 
   state = {
-    screen: 3
+    screen: 3,
+    login:'',
+    password:''
   };
 
   changeScreen(screen_num) {
     this.setState({
       screen: screen_num
+    });
+  }
+
+  setusername(login,password){
+    this.setState({
+      login:login,
+      password:password
     });
   }
 
@@ -60,7 +69,7 @@ export default class App extends React.Component {
       case 4:
         return (
           <View style={{flex: 1}}>
-            <LoginScreen register={this.changeScreen} />
+            <LoginScreen adduser={this.setusername} register={this.changeScreen} />
           </View>
         );
       case 3:
