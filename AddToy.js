@@ -75,10 +75,8 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   inputs: {
-    height: 45,
     marginLeft: 16,
-    borderBottomColor: '#FFFFFF',
-    flex: 1
+    borderBottomColor: '#FFFFFF'
   },
   inputIcon: {
     width: 30,
@@ -101,7 +99,7 @@ const styles = StyleSheet.create({
     borderRadius: 30
   },
   loginButton: {
-    backgroundColor: "#00b5ec"
+    backgroundColor: "#5DBCD2"
   },
   loginText: {
     color: 'white'
@@ -113,7 +111,8 @@ const styles = StyleSheet.create({
   addPhoto: {
     width: 300,
     height:300,
-    marginBottom: 20
+    marginBottom: 20,
+    borderRadius: 20
   },
   headerContainer: {
     textAlign: 'left'
