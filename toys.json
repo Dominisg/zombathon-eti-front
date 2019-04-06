@@ -1,0 +1,21 @@
+{
+    "toys":[
+    {
+        "name": "kaczka dwa",
+        "descripiton": "tekst",
+        "photo_path": "https://cdn0.iconfinder.com/data/icons/toys-1/154/toy-horse-child-game-512.png",
+        "condition": "4",
+        "age": "3",
+        "players_quantity": "5"
+    },
+    {
+        "name": "kaczka jeden",
+        "descripiton": "tekst",
+        "photo_path": "https://cdn0.iconfinder.com/data/icons/toys-1/154/toy-horse-child-game-512.png",
+        "condition": "4",
+        "age": "3",
+        "players_quantity": "5"
+    }
+
+]
+}
