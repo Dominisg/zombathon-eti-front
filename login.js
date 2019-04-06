@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 200,
+    marginBottom: 20,
     width: 250,
     borderRadius: 30
   },
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: -100,
+    marginBottom: 150,
     width: 250,
     borderRadius: 30
   },
