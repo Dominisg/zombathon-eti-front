@@ -6,7 +6,8 @@ import AddToy from './AddToy'
 import Swiper from './swipe'
 import LoginScreen from './login'
 import Header from './Header'
-
+import Profile from './profile'
+import SignUpView from './register'
 
 
 export default class App extends React.Component {
@@ -61,12 +62,24 @@ export default class App extends React.Component {
     return(
             <View style={{flex:1}}>
             <Header/>
+                <LoginScreen register={this.changeScreen}/>
+            </View>
+    );
+    case 4:
+    return(
+            <View style={{flex:1}}>
             <ScrollView style={styles.container}>
-                <LoginScreen/>
+                <Profile/>
             </ScrollView>
             <Navbar handle={this.changeScreen} />
       </View>
-      )
+    )
+    case 5:
+    return(
+      <View style={{flex:1}}>
+                <SignUpView/>
+      </View>
+    )
       }
   }
 }
