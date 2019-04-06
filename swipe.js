@@ -126,9 +126,7 @@ class Swiper extends Component {
             source={{uri:this.state.photo}}
             style={styles.addPhoto}
             /></GestureRecognizer>
-        <View style={styles.descContainer}>
-          <Text style={styles.inputs} underlineColorAndroid='transparent'>{this.state.description}</Text>
-        </View>
+          <Text style={styles.descContainer} underlineColorAndroid='transparent'>{this.state.description}</Text>
 
 
       </View>
@@ -161,9 +159,10 @@ const styles = StyleSheet.create({
       backgroundColor: '#DCDCDC',
       borderRadius: 20,
       borderBottomWidth: 1,
-      width: 300,
+      width: 350,
       height: 180,
       marginBottom: 10,
+      padding:15,
       flexDirection: 'row',
       marginRight:'auto',
       marginLeft:'auto',
@@ -201,12 +200,18 @@ const styles = StyleSheet.create({
       marginBottom: 15,
       flexDirection: "row",
       alignItems: "center",
-      textAlignVertical: "top",
+      textAlignVertical: "top"
     },
     addPhoto: {
-      width: 300,
-      height:300,
-      marginBottom: 20
+      borderRadius: 20,
+      borderBottomWidth: 1,
+      width: '100%',
+      minHeight: 350,
+      marginBottom: 10,
+      flexDirection: 'row',
+      marginRight:'auto',
+      marginLeft:'auto',
+      alignItems: 'center'
     },
   })
 
