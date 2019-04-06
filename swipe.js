@@ -16,6 +16,7 @@ class Swiper extends Component {
           {
             myText: this.item.name,
             photo: this.item.photo_path,
+            description: this.item.description
           }
         )
         });
@@ -27,6 +28,7 @@ class Swiper extends Component {
       {
         myText: this.item.name,
         photo: this.item.photo_path,
+        description: this.item.description
       })
     }
 
@@ -37,7 +39,8 @@ class Swiper extends Component {
       myText: 'Title',
       gestureName: 'none',
       backgroundColor: '#fff',
-      photo: "https://cdn0.iconfinder.com/data/icons/toys-1/154/toy-horse-child-game-512.png"
+      photo: "https://cdn0.iconfinder.com/data/icons/toys-1/154/toy-horse-child-game-512.png",
+      description: "..."
     };
   }
   onSwipeLeft(gestureState) {
@@ -49,6 +52,7 @@ class Swiper extends Component {
           {
             myText: this.item.name,
             photo: this.item.photo_path,
+            description: this.item.description
           }
         )
         });
@@ -66,6 +70,7 @@ class Swiper extends Component {
           {
             myText: this.item.name,
             photo: this.item.photo_path,
+            description: this.item.description
           }
         )
         });
@@ -122,7 +127,7 @@ class Swiper extends Component {
             style={styles.addPhoto}
             /></GestureRecognizer>
         <View style={styles.descContainer}>
-          <TextInput style={styles.inputs} placeholder="Description" underlineColorAndroid='transparent' onChangeText={(description) => this.setState({description})}/>
+          <Text style={styles.inputs} underlineColorAndroid='transparent'>{this.state.description}</Text>
         </View>
 
 
@@ -186,7 +191,7 @@ const styles = StyleSheet.create({
         alignSelf: 'flex-end'
     },
     inputs: {
-      height: 45,
+      height: 90,
       marginLeft: 16,
       borderBottomColor: '#FFFFFF',
       flex: 1

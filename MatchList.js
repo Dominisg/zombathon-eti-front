@@ -1,25 +1,7 @@
 import React,{Component} from 'react';
 import {ScrollView, FlatList, StyleSheet, Text, View } from 'react-native';
 import Match from './Match'
-
-const matches = [
-    {
-        toy_to_borrow:{
-            uri: "https://cdn0.iconfinder.com/data/icons/toys-1/154/toy-horse-child-game-512.png",
-        },
-        toy_to_lend:{
-            uri: "https://cdn0.iconfinder.com/data/icons/toys-1/154/toy-horse-child-game-512.png",
-        }
-    },
-    {
-        toy_to_borrow:{
-            uri: "https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg",
-        },
-        toy_to_lend:{
-            uri: "https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg",
-        }
-    },
-]
+import {getTrades} from './api'
 
 const styles = StyleSheet.create({
     container:{
@@ -35,11 +17,19 @@ const styles = StyleSheet.create({
 
 
 class MatchList extends Component{
-    state = {
-        matches : matches,
-    };
-    componentDidMount(){
 
+    state = {
+        matches : null,
+    }
+
+    componentDidMount(){
+    getTrades().then(resp=>{
+        this.setState(
+          {
+            matches: resp,
+          }
+        )
+        });
     }
     render(){
         return(
