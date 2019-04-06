@@ -235,8 +235,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
+    marginTop: 20,
     marginBottom: 20,
-    width: 250,
+    width: 100,
     borderRadius: 30
   },
   signupButton: {
