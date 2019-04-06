@@ -19,4 +19,3 @@ return fetch(urltrades)
 .then(response => response.json()).
 then(resp=>resp)
 }
-

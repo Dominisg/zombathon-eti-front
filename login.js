@@ -16,7 +16,7 @@ export default class LoginScreen extends Component {
   constructor(props) {
     super(props);
     state = {
-      email: '',
+      login: '',
       password: ''
     }
   }
@@ -38,7 +38,7 @@ export default class LoginScreen extends Component {
         <Image style={styles.inputIcon} source={{
             uri: 'https://png.icons8.com/message/ultraviolet/50/3498db'
           }}/>
-        <TextInput style={styles.inputs} placeholder="Email" keyboardType="email-address" underlineColorAndroid='transparent' onChangeText={(email) => this.setState({email})}/>
+        <TextInput style={styles.inputs} placeholder="Login" underlineColorAndroid='transparent' onChangeText={(login) => this.setState({login})}/>
       </View>
 
       <View style={styles.inputContainer}>
@@ -52,7 +52,7 @@ export default class LoginScreen extends Component {
         <Text style={styles.loginText}>Login</Text>
       </TouchableHighlight>
 
-      <TouchableHighlight style={styles.buttonContainer} onPress={() => this.props.register(5)}>
+      <TouchableHighlight style={styles.registerContainer} onPress={() => this.props.register(5)}>
         <Text>Don't have account? Register now!</Text>
       </TouchableHighlight>
     </View>
@@ -62,7 +62,7 @@ export default class LoginScreen extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop:40,
+    marginTop:10,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   },
   inputs: {
     height: 45,
-    marginLeft: 16,
+    marginLeft: 15,
     borderBottomColor: '#FFFFFF',
     flex: 1
   },
@@ -105,7 +105,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 20,
+    marginBottom: 200,
+    width: 250,
+    borderRadius: 30
+  },
+  registerContainer: {
+    height: 45,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: -100,
     width: 250,
     borderRadius: 30
   },

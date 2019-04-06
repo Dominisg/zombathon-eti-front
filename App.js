@@ -16,7 +16,7 @@ export default class App extends React.Component {
   }
 
   state = {
-    screen: 1
+    screen: 3
   };
 
   changeScreen(screen_num) {
@@ -57,18 +57,18 @@ export default class App extends React.Component {
             <Navbar handle={this.changeScreen} />
           </View>
         );
-      case 3:
+      case 4:
         return (
           <View style={{flex: 1}}>
             <LoginScreen register={this.changeScreen} />
           </View>
         );
-      case 4:
+      case 3:
         return (
           <View style={{flex: 1}}>
             <Header />
             <ScrollView style={styles.container}>
-              <Profile />
+              <Profile register={this.changeScreen} />
             </ScrollView>
             <Navbar handle={this.changeScreen} />
           </View>

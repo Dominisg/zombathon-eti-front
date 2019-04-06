@@ -263,7 +263,7 @@ const styles = StyleSheet.create({
   },
   signupButton: {
     backgroundColor: "#332978",
-    marginBottom: 50
+    marginBottom: 20
   },
   signUpText: {
     color: "white"

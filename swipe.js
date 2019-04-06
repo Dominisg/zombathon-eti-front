@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
       marginTop:30
     },
     container: {
-      marginTop:20,
+      marginBottom:30,
       flex: 1,
       marginRight:'auto',
       marginLeft:'auto',
@@ -161,8 +161,8 @@ const styles = StyleSheet.create({
       backgroundColor: '#DCDCDC',
       borderRadius: 20,
       borderBottomWidth: 1,
-      width: 250,
-      height: 160,
+      width: 300,
+      height: 180,
       marginBottom: 10,
       flexDirection: 'row',
       marginRight:'auto',
@@ -191,10 +191,17 @@ const styles = StyleSheet.create({
         alignSelf: 'flex-end'
     },
     inputs: {
-      height: 90,
-      marginLeft: 16,
-      borderBottomColor: '#FFFFFF',
-      flex: 1
+      borderBottomColor: "#F5FCFF",
+      backgroundColor: "#DCDCDC",
+      borderRadius: 20,
+      borderBottomWidth: 1,
+      width: 300,
+      height: 180,
+      padding: 15,
+      marginBottom: 15,
+      flexDirection: "row",
+      alignItems: "center",
+      textAlignVertical: "top",
     },
     addPhoto: {
       width: 300,
